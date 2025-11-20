@@ -73,7 +73,7 @@ classDiagram
         +setCompleted(boolean completed): void
     }
 
-    interface TodoRepository {
+    class TodoRepository <<interface>> {
         +findAll(): List<Todo>
         +findById(Long id): Optional<Todo>
         +save(Todo todo): Todo
