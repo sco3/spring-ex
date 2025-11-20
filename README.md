@@ -65,29 +65,30 @@ classDiagram
         -boolean completed
         +Todo()
         +Todo(String title, boolean completed)
-        +getId(): Long
-        +setId(Long id): void
-        +getTitle(): String
-        +setTitle(String title): void
-        +isCompleted(): boolean
-        +setCompleted(boolean completed): void
+        +getId() Long
+        +setId(Long id) void
+        +getTitle() String
+        +setTitle(String title) void
+        +isCompleted() boolean
+        +setCompleted(boolean completed) void
     }
 
-    class TodoRepository <<interface>> {
-        +findAll(): List<Todo>
-        +findById(Long id): Optional<Todo>
-        +save(Todo todo): Todo
-        +deleteById(Long id): void
+    class TodoRepository {
+        <<interface>>
+        +findAll() List~Todo~
+        +findById(Long id) Optional~Todo~
+        +save(Todo todo) Todo
+        +deleteById(Long id) void
     }
 
     class TodoController {
         -TodoRepository todoRepository
-        +listTodos(): List<Todo>
-        +getAllTodos(): List<Todo>
-        +createTodo(Todo todo): Todo
-        +getTodoById(Long todoId): ResponseEntity<Todo>
-        +updateTodo(Long todoId, Todo todoDetails): ResponseEntity<Todo>
-        +deleteTodo(Long todoId): ResponseEntity<Void>
+        +listTodos() List~Todo~
+        +getAllTodos() List~Todo~
+        +createTodo(Todo todo) Todo
+        +getTodoById(Long todoId) ResponseEntity~Todo~
+        +updateTodo(Long todoId, Todo todoDetails) ResponseEntity~Todo~
+        +deleteTodo(Long todoId) ResponseEntity~Void~
     }
 
     TodoController "1" -- "1" TodoRepository : uses
