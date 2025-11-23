@@ -15,9 +15,9 @@ java {
 	}
 }
 
-group = 'com.example'
+group = 'sco3'
 version = '0.0.1-SNAPSHOT'
-description = 'Demo project for Spring Boot'
+description = 'Spring Boot Exercise'
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'

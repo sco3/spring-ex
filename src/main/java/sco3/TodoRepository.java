@@ -1,4 +1,4 @@
-package com.example.demo;
+package sco3;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
