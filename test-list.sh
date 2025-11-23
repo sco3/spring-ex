@@ -1,3 +1,3 @@
 #!/usr/bin/env -S bash
 
-curl localhost:8080/todos
+echo $(curl -s localhost:8080/todos)
